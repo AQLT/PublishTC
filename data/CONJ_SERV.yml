@@ -1,0 +1,9 @@
+dataset: CONJ_SERV
+series:
+  bc_serv: "001587025"
+  bc_transports: "001786553"
+  bc_heb: "001786554"
+  bc_info: "001786555"
+  bc_immp: "001786556"
+  bc_actspec: "001786557"
+  bc_servadm: "001786558"

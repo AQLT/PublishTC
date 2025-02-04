@@ -1,0 +1,7 @@
+dataset: ICA_ind
+series:
+  ica_c1: "010771874"
+  ica_c3: "010772600"
+  ica_c4: "010774178"
+  ica_c5: "010771532"
+  ica_cZ: "010772026"
