@@ -1,4 +1,21 @@
 dataset: CONJ_FRANCE
+datasetname: CONJ_FRANCE
 series:
-  bc_fr: "001565530"
-  ec_fr: "001796629"
+  bc_fr:
+    idbank: '001565530'
+    description: Indicateur synthétique du climat des affaires France
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  ec_fr:
+    idbank: 001796629
+    description: Indicateur synthétique du climat de l'emploi France
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0

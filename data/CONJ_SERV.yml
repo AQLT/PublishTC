@@ -1,9 +1,71 @@
 dataset: CONJ_SERV
+datasetname: CONJ_SERV
 series:
-  bc_serv: "001587025"
-  bc_transports: "001786553"
-  bc_heb: "001786554"
-  bc_info: "001786555"
-  bc_immp: "001786556"
-  bc_actspec: "001786557"
-  bc_servadm: "001786558"
+  bc_serv:
+    idbank: 001587025
+    description: Indicateur synthétique du climat des affaires dans les services
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  bc_transports:
+    idbank: 001786553
+    description: Indicateur synthétique du climat des affaires dans le transport (H)
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  bc_heb:
+    idbank: 001786554
+    description: Indicateur synthétique du climat des affaires dans l'hébergement-restauration
+      (I)
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  bc_info:
+    idbank: 001786555
+    description: Indicateur synthétique du climat des affaires dans l'information-communication
+      (J)
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  bc_immp:
+    idbank: 001786556
+    description: Indicateur synthétique du climat des affaires dans les activités
+      immobilières (L)
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  bc_actspec:
+    idbank: 001786557
+    description: Indicateur synthétique du climat des affaires dans les activités
+      spécialisées, scientifiques et techniques (M)
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  bc_servadm:
+    idbank: 001786558
+    description: Indicateur synthétique du climat des affaires dans les services administratifs
+      et de soutien (N)
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0

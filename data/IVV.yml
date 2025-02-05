@@ -1,6 +1,43 @@
 dataset: IVV
+datasetname: IVV
 series:
-  ivv_45: "010769899"
-  ivv_46: "010769901"
-  ivv_47: "010769903"
-  ivv_commerce: "010769897"
+  ivv_commerce:
+    idbank: 010769897
+    description: Indice de volume des ventes dans le commerce, la réparation d’automobiles
+      et de motocycles (G)
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  ivv_45:
+    idbank: 010769899
+    description: Indice de volume des ventes dans le commerce et réparation d'automobiles
+      et de motocycles
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  ivv_46:
+    idbank: 010769901
+    description: Indice de volume des ventes dans le commerce de gros, à l’exception
+      des automobiles et des motocycles (46)
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  ivv_47:
+    idbank: 010769903
+    description: Indice de volume des ventes dans le commerce de détail, à l’exception
+      des automobiles et des motocycles (47)
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0

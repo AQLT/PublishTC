@@ -1,7 +1,50 @@
 dataset: CONJ_COMD
+datasetname: CONJ_COMD
 series:
-  compre: "001580201"
-  ossk: "001580278"
-  tcapa: "001580317"
-  tcapre: "001580355"
-  bc_comd: "001580428"
+  bc_comd:
+    idbank: 001580428
+    description: Indicateur synthétique du climat des affaires dans le commerce de
+      détails
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  compre:
+    idbank: 001580201
+    description: Intentions de commandes pour les 3 prochains mois
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  ossk:
+    idbank: 001580278
+    description: Niveau du stock pour la période de l'année
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  tcapa:
+    idbank: 001580317
+    description: Évolution des affaires (ventes) au cours des 3 derniers mois
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  tcapre:
+    idbank: 001580355
+    description: Évolution probable des affaires (ventes) au cours des 3 prochains
+      mois
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0

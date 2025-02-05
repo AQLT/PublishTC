@@ -1,13 +1,108 @@
 dataset: CONJ_INDUSTRIE
+datasetname: CONJ_INDUSTRIE
 series:
-  oscd: "001585942"
-  oscde: "001585980"
-  ossk: "001586017"
-  tppa: "001586064"
-  tppre: "001586103"
-  pgp: "001586052"
-  bc_cz: "001585934"
-  bc_c1: "001786503"
-  bc_c3: "001786504"
-  bc_c4: "001786505"
-  bc_c5: "001786506"
+  bc_cz:
+    idbank: 001585934
+    description: Indicateur synthétique du climat des affaires dans l'industrie manufacturière
+      (CZ)
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  bc_c1:
+    idbank: 001786503
+    description: Indicateur synthétique du climat des affaires dans l'agro-alimentaire
+      (C1)
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  bc_c3:
+    idbank: 001786504
+    description: Indicateur synthétique du climat des affaires dans les biens d'équipement
+      (C3)
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  bc_c4:
+    idbank: 001786505
+    description: Indicateur synthétique du climat des affaires dans les matériels
+      de transport (C4)
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  bc_c5:
+    idbank: 001786506
+    description: Indicateur synthétique du climat des affaires dans les autres industries
+      (C5)
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  oscd:
+    idbank: 001585942
+    description: Niveau des carnets et de la demande
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  oscde:
+    idbank: 001585980
+    description: Niveau des carnets et de la demande étrangère
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  ossk:
+    idbank: 001586017
+    description: Niveau des stocks de produits fabriqués
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  tppa:
+    idbank: 001586064
+    description: Tendance récente de la production
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  tppre:
+    idbank: 001586103
+    description: Tendance probable de la production
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  pgp:
+    idbank: 001586052
+    description: 'Perspectives générales : tendance probable du volume de la production
+      industrielle'
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0

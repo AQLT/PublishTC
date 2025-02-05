@@ -1,7 +1,50 @@
 dataset: IPI
+datasetname: IPI
 series:
-  ipi_c1: "010768267"
-  ipi_c3: "010768271"
-  ipi_c4: "010768273"
-  ipi_c5: "010768275"
-  ipi_cZ: "010768307"
+  ipi_cz:
+    idbank: 010768307
+    description: Indice de production industrielle dans l'industrie manufacturière
+      (CZ)
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  ipi_c1:
+    idbank: 010768267
+    description: Indice de production industrielle dans l'agro-alimentaire (C1)
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  ipi_c3:
+    idbank: 010768271
+    description: Indice de production industrielle dans les biens d'équipement (C3)
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  ipi_c4:
+    idbank: 010768273
+    description: Indice de production industrielle dans les matériels de transport
+      (C4)
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  ipi_c5:
+    idbank: 010768275
+    description: Indice de production industrielle dans les autres industries (C5)
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0

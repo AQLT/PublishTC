@@ -1,7 +1,48 @@
 dataset: ICA_ind
+datasetname: ICA_ind
 series:
-  ica_c1: "010771874"
-  ica_c3: "010772600"
-  ica_c4: "010774178"
-  ica_c5: "010771532"
-  ica_cZ: "010772026"
+  ica_cz:
+    idbank: '010772026'
+    description: Indice de chiffre d'affaires  dans l'industrie manufacturière (CZ)
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  ica_c1:
+    idbank: 010771874
+    description: Indice de chiffre d'affaires  dans l'agro-alimentaire (C1)
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  ica_c3:
+    idbank: '010772600'
+    description: Indice de chiffre d'affaires  dans les biens d'équipement (C3)
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  ica_c4:
+    idbank: 010774178
+    description: Indice de chiffre d'affaires  dans les matériels de transport (C4)
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
+  ica_c5:
+    idbank: '010771532'
+    description: Indice de chiffre d'affaires  dans les autres industries (C5)
+    outliers:
+      ao: ~
+      aoinv: ~
+      ls: ~
+    first_date: 2012.0
+    length: 13.0
