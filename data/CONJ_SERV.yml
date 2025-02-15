@@ -24,6 +24,13 @@ series:
       - 2021.9166667
     first_date: 2012.0
     length: 13.0
+    methods:
+      henderson: yes
+      henderson_localic: yes
+      henderson_robust: no
+      henderson_robus_localic: yes
+      clf_cn: yes
+      clf_alf: no
   bc_transports:
     idbank: 001786553
     description: Indicateur synthétique du climat des affaires dans le transport (H)
@@ -39,6 +46,13 @@ series:
       - 2021.3333333
     first_date: 2012.0
     length: 13.0
+    methods:
+      henderson: yes
+      henderson_localic: yes
+      henderson_robust: no
+      henderson_robus_localic: yes
+      clf_cn: yes
+      clf_alf: no
   bc_heb:
     idbank: 001786554
     description: Indicateur synthétique du climat des affaires dans l'hébergement-restauration
@@ -58,6 +72,13 @@ series:
       - 2021.3333333
     first_date: 2012.0
     length: 13.0
+    methods:
+      henderson: yes
+      henderson_localic: yes
+      henderson_robust: no
+      henderson_robus_localic: yes
+      clf_cn: yes
+      clf_alf: no
   bc_info:
     idbank: 001786555
     description: Indicateur synthétique du climat des affaires dans l'information-communication
@@ -71,6 +92,13 @@ series:
       - 2020.9166667
     first_date: 2012.0
     length: 13.0
+    methods:
+      henderson: yes
+      henderson_localic: yes
+      henderson_robust: no
+      henderson_robus_localic: yes
+      clf_cn: yes
+      clf_alf: no
   bc_immp:
     idbank: 001786556
     description: Indicateur synthétique du climat des affaires dans les activités
@@ -88,6 +116,13 @@ series:
       - 2021.3333333
     first_date: 2012.0
     length: 13.0
+    methods:
+      henderson: yes
+      henderson_localic: yes
+      henderson_robust: no
+      henderson_robus_localic: yes
+      clf_cn: yes
+      clf_alf: no
   bc_actspec:
     idbank: 001786557
     description: Indicateur synthétique du climat des affaires dans les activités
@@ -105,6 +140,13 @@ series:
       - 2021.3333333
     first_date: 2012.0
     length: 13.0
+    methods:
+      henderson: yes
+      henderson_localic: yes
+      henderson_robust: no
+      henderson_robus_localic: yes
+      clf_cn: yes
+      clf_alf: no
   bc_servadm:
     idbank: 001786558
     description: Indicateur synthétique du climat des affaires dans les services administratifs
@@ -121,3 +163,10 @@ series:
       - 2021.3333333
     first_date: 2012.0
     length: 13.0
+    methods:
+      henderson: yes
+      henderson_localic: yes
+      henderson_robust: no
+      henderson_robus_localic: yes
+      clf_cn: yes
+      clf_alf: no

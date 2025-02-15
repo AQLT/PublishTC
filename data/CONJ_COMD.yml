@@ -15,6 +15,13 @@ series:
       - 2021.3333333
     first_date: 2012.0
     length: 13.0
+    methods:
+      henderson: yes
+      henderson_localic: yes
+      henderson_robust: no
+      henderson_robus_localic: yes
+      clf_cn: yes
+      clf_alf: no
   compre:
     idbank: 001580201
     description: Intentions de commandes pour les 3 prochains mois
@@ -27,6 +34,13 @@ series:
       ls: ~
     first_date: 2012.0
     length: 13.0
+    methods:
+      henderson: yes
+      henderson_localic: yes
+      henderson_robust: no
+      henderson_robus_localic: yes
+      clf_cn: yes
+      clf_alf: no
   ossk:
     idbank: 001580278
     description: Niveau du stock pour la période de l'année
@@ -36,6 +50,13 @@ series:
       ls: ~
     first_date: 2012.0
     length: 13.0
+    methods:
+      henderson: yes
+      henderson_localic: yes
+      henderson_robust: no
+      henderson_robus_localic: yes
+      clf_cn: yes
+      clf_alf: no
   tcapa:
     idbank: 001580317
     description: Évolution des affaires (ventes) au cours des 3 derniers mois
@@ -47,6 +68,13 @@ series:
       - 2020.5833333
     first_date: 2012.0
     length: 13.0
+    methods:
+      henderson: yes
+      henderson_localic: yes
+      henderson_robust: no
+      henderson_robus_localic: yes
+      clf_cn: yes
+      clf_alf: no
   tcapre:
     idbank: 001580355
     description: Évolution probable des affaires (ventes) au cours des 3 prochains
@@ -60,3 +88,10 @@ series:
       ls: 2021.3333333
     first_date: 2012.0
     length: 13.0
+    methods:
+      henderson: yes
+      henderson_localic: yes
+      henderson_robust: no
+      henderson_robus_localic: yes
+      clf_cn: yes
+      clf_alf: no

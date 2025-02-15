@@ -15,6 +15,13 @@ series:
       ls: 2021.4166667
     first_date: 2012.0
     length: 13.0
+    methods:
+      henderson: yes
+      henderson_localic: yes
+      henderson_robust: no
+      henderson_robus_localic: yes
+      clf_cn: yes
+      clf_alf: no
   ivv_45:
     idbank: 010769899
     description: Indice de volume des ventes dans le commerce et réparation d'automobiles
@@ -31,6 +38,13 @@ series:
       - 2020.3333333
     first_date: 2012.0
     length: 13.0
+    methods:
+      henderson: yes
+      henderson_localic: yes
+      henderson_robust: no
+      henderson_robus_localic: yes
+      clf_cn: yes
+      clf_alf: no
   ivv_46:
     idbank: 010769901
     description: Indice de volume des ventes dans le commerce de gros, à l’exception
@@ -44,6 +58,13 @@ series:
       - 2021.4166667
     first_date: 2012.0
     length: 13.0
+    methods:
+      henderson: yes
+      henderson_localic: yes
+      henderson_robust: no
+      henderson_robus_localic: yes
+      clf_cn: yes
+      clf_alf: no
   ivv_47:
     idbank: 010769903
     description: Indice de volume des ventes dans le commerce de détail, à l’exception
@@ -63,3 +84,10 @@ series:
       ls: 2024.5833333
     first_date: 2012.0
     length: 13.0
+    methods:
+      henderson: yes
+      henderson_localic: yes
+      henderson_robust: no
+      henderson_robus_localic: yes
+      clf_cn: yes
+      clf_alf: no

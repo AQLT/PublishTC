@@ -15,6 +15,13 @@ series:
       - 2021.25
     first_date: 2012.0
     length: 13.0
+    methods:
+      henderson: yes
+      henderson_localic: yes
+      henderson_robust: no
+      henderson_robus_localic: yes
+      clf_cn: yes
+      clf_alf: no
   bc_c1:
     idbank: 001786503
     description: Indicateur synthétique du climat des affaires dans l'agro-alimentaire
@@ -27,6 +34,13 @@ series:
       - 2021.3333333
     first_date: 2012.0
     length: 13.0
+    methods:
+      henderson: yes
+      henderson_localic: yes
+      henderson_robust: no
+      henderson_robus_localic: yes
+      clf_cn: yes
+      clf_alf: no
   bc_c3:
     idbank: 001786504
     description: Indicateur synthétique du climat des affaires dans les biens d'équipement
@@ -41,6 +55,13 @@ series:
       - 2021.25
     first_date: 2012.0
     length: 13.0
+    methods:
+      henderson: yes
+      henderson_localic: yes
+      henderson_robust: no
+      henderson_robus_localic: yes
+      clf_cn: yes
+      clf_alf: no
   bc_c4:
     idbank: 001786505
     description: Indicateur synthétique du climat des affaires dans les matériels
@@ -54,6 +75,13 @@ series:
       - 2022.0
     first_date: 2012.0
     length: 13.0
+    methods:
+      henderson: yes
+      henderson_localic: yes
+      henderson_robust: no
+      henderson_robus_localic: yes
+      clf_cn: yes
+      clf_alf: no
   bc_c5:
     idbank: 001786506
     description: Indicateur synthétique du climat des affaires dans les autres industries
@@ -67,6 +95,13 @@ series:
       - 2020.9166667
     first_date: 2012.0
     length: 13.0
+    methods:
+      henderson: yes
+      henderson_localic: yes
+      henderson_robust: no
+      henderson_robus_localic: yes
+      clf_cn: yes
+      clf_alf: no
   oscd:
     idbank: 001585942
     description: Niveau des carnets et de la demande
@@ -78,6 +113,13 @@ series:
       - 2020.5833333
     first_date: 2012.0
     length: 13.0
+    methods:
+      henderson: yes
+      henderson_localic: yes
+      henderson_robust: no
+      henderson_robus_localic: yes
+      clf_cn: yes
+      clf_alf: no
   oscde:
     idbank: 001585980
     description: Niveau des carnets et de la demande étrangère
@@ -89,6 +131,13 @@ series:
       - 2020.6666667
     first_date: 2012.0
     length: 13.0
+    methods:
+      henderson: yes
+      henderson_localic: yes
+      henderson_robust: no
+      henderson_robus_localic: yes
+      clf_cn: yes
+      clf_alf: no
   ossk:
     idbank: 001586017
     description: Niveau des stocks de produits fabriqués
@@ -98,6 +147,13 @@ series:
       ls: ~
     first_date: 2012.0
     length: 13.0
+    methods:
+      henderson: yes
+      henderson_localic: yes
+      henderson_robust: no
+      henderson_robus_localic: yes
+      clf_cn: yes
+      clf_alf: no
   tppa:
     idbank: 001586064
     description: Tendance récente de la production
@@ -110,6 +166,13 @@ series:
       - 2020.5833333
     first_date: 2012.0
     length: 13.0
+    methods:
+      henderson: yes
+      henderson_localic: yes
+      henderson_robust: no
+      henderson_robus_localic: yes
+      clf_cn: yes
+      clf_alf: no
   tppre:
     idbank: 001586103
     description: Tendance probable de la production
@@ -122,6 +185,13 @@ series:
       ls: 2020.4166667
     first_date: 2012.0
     length: 13.0
+    methods:
+      henderson: yes
+      henderson_localic: yes
+      henderson_robust: no
+      henderson_robus_localic: yes
+      clf_cn: yes
+      clf_alf: no
   pgp:
     idbank: 001586052
     description: 'Perspectives générales : tendance probable du volume de la production
@@ -138,3 +208,10 @@ series:
       - 2022.1666667
     first_date: 2012.0
     length: 13.0
+    methods:
+      henderson: yes
+      henderson_localic: yes
+      henderson_robust: no
+      henderson_robus_localic: yes
+      clf_cn: yes
+      clf_alf: no

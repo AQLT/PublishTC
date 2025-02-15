@@ -20,6 +20,13 @@ series:
       - 2021.3333333
     first_date: 2012.0
     length: 13.0
+    methods:
+      henderson: yes
+      henderson_localic: yes
+      henderson_robust: no
+      henderson_robus_localic: yes
+      clf_cn: yes
+      clf_alf: no
   ec_fr:
     idbank: 001796629
     description: Indicateur synthétique du climat de l'emploi France
@@ -39,3 +46,10 @@ series:
       - 2021.4166667
     first_date: 2012.0
     length: 13.0
+    methods:
+      henderson: yes
+      henderson_localic: yes
+      henderson_robust: no
+      henderson_robus_localic: yes
+      clf_cn: yes
+      clf_alf: no
