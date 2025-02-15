@@ -15,7 +15,10 @@ series:
     idbank: 010768267
     description: Indice de production industrielle dans l'agro-alimentaire (C1)
     outliers:
-      ao: ~
+      ao:
+      - 2013.4166667
+      - 2020.25
+      - 2020.3333333
       aoinv: ~
       ls: ~
     first_date: 2012.0
@@ -24,9 +27,11 @@ series:
     idbank: 010768271
     description: Indice de production industrielle dans les biens d'équipement (C3)
     outliers:
-      ao: ~
+      ao: 2020.25
       aoinv: ~
-      ls: ~
+      ls:
+      - 2020.1666667
+      - 2020.4166667
     first_date: 2012.0
     length: 13.0
   ipi_c4:
@@ -34,17 +39,22 @@ series:
     description: Indice de production industrielle dans les matériels de transport
       (C4)
     outliers:
-      ao: ~
+      ao:
+      - 2020.25
+      - 2020.3333333
       aoinv: ~
-      ls: ~
+      ls: 2020.1666667
     first_date: 2012.0
     length: 13.0
   ipi_c5:
     idbank: 010768275
     description: Indice de production industrielle dans les autres industries (C5)
     outliers:
-      ao: ~
+      ao: 2020.25
       aoinv: ~
-      ls: ~
+      ls:
+      - 2020.1666667
+      - 2020.4166667
+      - 2020.5
     first_date: 2012.0
     length: 13.0

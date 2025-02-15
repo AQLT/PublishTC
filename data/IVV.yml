@@ -6,9 +6,13 @@ series:
     description: Indice de volume des ventes dans le commerce, la réparation d’automobiles
       et de motocycles (G)
     outliers:
-      ao: ~
+      ao:
+      - 2020.1666667
+      - 2020.25
+      - 2020.3333333
+      - 2020.8333333
       aoinv: ~
-      ls: ~
+      ls: 2021.4166667
     first_date: 2012.0
     length: 13.0
   ivv_45:
@@ -16,9 +20,15 @@ series:
     description: Indice de volume des ventes dans le commerce et réparation d'automobiles
       et de motocycles
     outliers:
-      ao: ~
+      ao:
+      - 2020.1666667
+      - 2020.3333333
+      - 2020.5
+      - 2020.8333333
       aoinv: ~
-      ls: ~
+      ls:
+      - 2020.1666667
+      - 2020.3333333
     first_date: 2012.0
     length: 13.0
   ivv_46:
@@ -26,9 +36,12 @@ series:
     description: Indice de volume des ventes dans le commerce de gros, à l’exception
       des automobiles et des motocycles (46)
     outliers:
-      ao: ~
+      ao: 2020.25
       aoinv: ~
-      ls: ~
+      ls:
+      - 2020.1666667
+      - 2020.4166667
+      - 2021.4166667
     first_date: 2012.0
     length: 13.0
   ivv_47:
@@ -36,8 +49,17 @@ series:
     description: Indice de volume des ventes dans le commerce de détail, à l’exception
       des automobiles et des motocycles (47)
     outliers:
-      ao: ~
+      ao:
+      - 2015.8333333
+      - 2017.75
+      - 2020.1666667
+      - 2020.25
+      - 2020.3333333
+      - 2020.5833333
+      - 2020.8333333
+      - 2020.9166667
+      - 2021.25
       aoinv: ~
-      ls: ~
+      ls: 2024.5833333
     first_date: 2012.0
     length: 13.0

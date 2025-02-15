@@ -5,9 +5,11 @@ series:
     idbank: '010772026'
     description: Indice de chiffre d'affaires  dans l'industrie manufacturière (CZ)
     outliers:
-      ao: ~
+      ao:
+      - 2020.25
+      - 2020.3333333
       aoinv: ~
-      ls: ~
+      ls: 2020.1666667
     first_date: 2012.0
     length: 13.0
   ica_c1:
@@ -16,33 +18,49 @@ series:
     outliers:
       ao: ~
       aoinv: ~
-      ls: ~
+      ls:
+      - 2020.25
+      - 2020.4166667
     first_date: 2012.0
     length: 13.0
   ica_c3:
     idbank: '010772600'
     description: Indice de chiffre d'affaires  dans les biens d'équipement (C3)
     outliers:
-      ao: ~
+      ao:
+      - 2020.25
+      - 2020.8333333
+      - 2023.1666667
+      - 2023.3333333
+      - 2024.25
       aoinv: ~
-      ls: ~
+      ls:
+      - 2020.1666667
+      - 2020.4166667
+      - 2022.5833333
     first_date: 2012.0
     length: 13.0
   ica_c4:
     idbank: 010774178
     description: Indice de chiffre d'affaires  dans les matériels de transport (C4)
     outliers:
-      ao: ~
+      ao:
+      - 2020.25
+      - 2020.3333333
       aoinv: ~
-      ls: ~
+      ls:
+      - 2020.1666667
+      - 2021.9166667
     first_date: 2012.0
     length: 13.0
   ica_c5:
     idbank: '010771532'
     description: Indice de chiffre d'affaires  dans les autres industries (C5)
     outliers:
-      ao: ~
+      ao: 2020.25
       aoinv: ~
-      ls: ~
+      ls:
+      - 2020.1666667
+      - 2020.4166667
     first_date: 2012.0
     length: 13.0

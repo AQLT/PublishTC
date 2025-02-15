@@ -5,17 +5,37 @@ series:
     idbank: '001565530'
     description: Indicateur synthétique du climat des affaires France
     outliers:
-      ao: ~
+      ao:
+      - 2020.3333333
+      - 2020.4166667
+      - 2020.8333333
+      - 2022.0833333
+      - 2024.5
       aoinv: ~
-      ls: ~
+      ls:
+      - 2020.1666667
+      - 2020.25
+      - 2020.4166667
+      - 2021.1666667
+      - 2021.3333333
     first_date: 2012.0
     length: 13.0
   ec_fr:
     idbank: 001796629
     description: Indicateur synthétique du climat de l'emploi France
     outliers:
-      ao: ~
+      ao:
+      - 2020.1666667
+      - 2020.25
+      - 2020.4166667
+      - 2020.8333333
       aoinv: ~
-      ls: ~
+      ls:
+      - 2020.25
+      - 2020.4166667
+      - 2020.5833333
+      - 2021.1666667
+      - 2021.3333333
+      - 2021.4166667
     first_date: 2012.0
     length: 13.0

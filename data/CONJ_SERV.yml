@@ -5,18 +5,38 @@ series:
     idbank: 001587025
     description: Indicateur synthétique du climat des affaires dans les services
     outliers:
-      ao: ~
+      ao:
+      - 2020.25
+      - 2020.4166667
+      - 2020.5
+      - 2020.8333333
+      - 2021.0833333
+      - 2022.0833333
+      - 2024.5
       aoinv: ~
-      ls: ~
+      ls:
+      - 2020.1666667
+      - 2020.25
+      - 2020.4166667
+      - 2020.75
+      - 2021.3333333
+      - 2021.4166667
+      - 2021.9166667
     first_date: 2012.0
     length: 13.0
   bc_transports:
     idbank: 001786553
     description: Indicateur synthétique du climat des affaires dans le transport (H)
     outliers:
-      ao: ~
+      ao:
+      - 2020.25
+      - 2020.3333333
+      - 2020.5833333
+      - 2020.8333333
       aoinv: ~
-      ls: ~
+      ls:
+      - 2020.1666667
+      - 2021.3333333
     first_date: 2012.0
     length: 13.0
   bc_heb:
@@ -24,9 +44,18 @@ series:
     description: Indicateur synthétique du climat des affaires dans l'hébergement-restauration
       (I)
     outliers:
-      ao: ~
+      ao:
+      - 2020.4166667
+      - 2021.5
+      - 2021.9166667
+      - 2022.0
       aoinv: ~
-      ls: ~
+      ls:
+      - 2020.1666667
+      - 2020.25
+      - 2020.4166667
+      - 2020.8333333
+      - 2021.3333333
     first_date: 2012.0
     length: 13.0
   bc_info:
@@ -36,7 +65,10 @@ series:
     outliers:
       ao: ~
       aoinv: ~
-      ls: ~
+      ls:
+      - 2020.25
+      - 2020.4166667
+      - 2020.9166667
     first_date: 2012.0
     length: 13.0
   bc_immp:
@@ -46,7 +78,14 @@ series:
     outliers:
       ao: ~
       aoinv: ~
-      ls: ~
+      ls:
+      - 2017.8333333
+      - 2020.1666667
+      - 2020.25
+      - 2020.4166667
+      - 2020.5
+      - 2021.1666667
+      - 2021.3333333
     first_date: 2012.0
     length: 13.0
   bc_actspec:
@@ -54,9 +93,16 @@ series:
     description: Indicateur synthétique du climat des affaires dans les activités
       spécialisées, scientifiques et techniques (M)
     outliers:
-      ao: ~
+      ao:
+      - 2020.3333333
+      - 2020.4166667
+      - 2020.8333333
       aoinv: ~
-      ls: ~
+      ls:
+      - 2020.1666667
+      - 2020.25
+      - 2020.4166667
+      - 2021.3333333
     first_date: 2012.0
     length: 13.0
   bc_servadm:
@@ -64,8 +110,14 @@ series:
     description: Indicateur synthétique du climat des affaires dans les services administratifs
       et de soutien (N)
     outliers:
-      ao: ~
+      ao: 2020.8333333
       aoinv: ~
-      ls: ~
+      ls:
+      - 2020.1666667
+      - 2020.25
+      - 2020.3333333
+      - 2020.4166667
+      - 2020.5
+      - 2021.3333333
     first_date: 2012.0
     length: 13.0

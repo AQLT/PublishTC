@@ -8,7 +8,11 @@ series:
     outliers:
       ao: ~
       aoinv: ~
-      ls: ~
+      ls:
+      - 2020.25
+      - 2020.4166667
+      - 2020.5833333
+      - 2021.25
     first_date: 2012.0
     length: 13.0
   bc_c1:
@@ -18,7 +22,9 @@ series:
     outliers:
       ao: ~
       aoinv: ~
-      ls: ~
+      ls:
+      - 2020.25
+      - 2021.3333333
     first_date: 2012.0
     length: 13.0
   bc_c3:
@@ -28,7 +34,11 @@ series:
     outliers:
       ao: ~
       aoinv: ~
-      ls: ~
+      ls:
+      - 2020.25
+      - 2020.5
+      - 2021.0
+      - 2021.25
     first_date: 2012.0
     length: 13.0
   bc_c4:
@@ -36,9 +46,12 @@ series:
     description: Indicateur synthétique du climat des affaires dans les matériels
       de transport (C4)
     outliers:
-      ao: ~
+      ao: 2024.75
       aoinv: ~
-      ls: ~
+      ls:
+      - 2020.25
+      - 2020.5833333
+      - 2022.0
     first_date: 2012.0
     length: 13.0
   bc_c5:
@@ -48,7 +61,10 @@ series:
     outliers:
       ao: ~
       aoinv: ~
-      ls: ~
+      ls:
+      - 2020.25
+      - 2020.5833333
+      - 2020.9166667
     first_date: 2012.0
     length: 13.0
   oscd:
@@ -57,7 +73,9 @@ series:
     outliers:
       ao: ~
       aoinv: ~
-      ls: ~
+      ls:
+      - 2020.25
+      - 2020.5833333
     first_date: 2012.0
     length: 13.0
   oscde:
@@ -66,7 +84,9 @@ series:
     outliers:
       ao: ~
       aoinv: ~
-      ls: ~
+      ls:
+      - 2020.25
+      - 2020.6666667
     first_date: 2012.0
     length: 13.0
   ossk:
@@ -84,16 +104,22 @@ series:
     outliers:
       ao: ~
       aoinv: ~
-      ls: ~
+      ls:
+      - 2020.25
+      - 2020.3333333
+      - 2020.5833333
     first_date: 2012.0
     length: 13.0
   tppre:
     idbank: 001586103
     description: Tendance probable de la production
     outliers:
-      ao: ~
+      ao:
+      - 2020.25
+      - 2020.8333333
+      - 2023.5
       aoinv: ~
-      ls: ~
+      ls: 2020.4166667
     first_date: 2012.0
     length: 13.0
   pgp:
@@ -101,8 +127,14 @@ series:
     description: 'Perspectives générales : tendance probable du volume de la production
       industrielle'
     outliers:
-      ao: ~
+      ao:
+      - 2020.25
+      - 2020.8333333
       aoinv: ~
-      ls: ~
+      ls:
+      - 2020.1666667
+      - 2020.4166667
+      - 2021.3333333
+      - 2022.1666667
     first_date: 2012.0
     length: 13.0

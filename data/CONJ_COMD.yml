@@ -6,16 +6,23 @@ series:
     description: Indicateur synthétique du climat des affaires dans le commerce de
       détails
     outliers:
-      ao: ~
+      ao: 2020.8333333
       aoinv: ~
-      ls: ~
+      ls:
+      - 2020.1666667
+      - 2020.25
+      - 2020.4166667
+      - 2021.3333333
     first_date: 2012.0
     length: 13.0
   compre:
     idbank: 001580201
     description: Intentions de commandes pour les 3 prochains mois
     outliers:
-      ao: ~
+      ao:
+      - 2020.25
+      - 2020.3333333
+      - 2020.8333333
       aoinv: ~
       ls: ~
     first_date: 2012.0
@@ -35,7 +42,9 @@ series:
     outliers:
       ao: ~
       aoinv: ~
-      ls: ~
+      ls:
+      - 2020.3333333
+      - 2020.5833333
     first_date: 2012.0
     length: 13.0
   tcapre:
@@ -43,8 +52,11 @@ series:
     description: Évolution probable des affaires (ventes) au cours des 3 prochains
       mois
     outliers:
-      ao: ~
+      ao:
+      - 2020.25
+      - 2020.3333333
+      - 2020.8333333
       aoinv: ~
-      ls: ~
+      ls: 2021.3333333
     first_date: 2012.0
     length: 13.0
