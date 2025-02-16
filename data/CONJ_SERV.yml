@@ -28,9 +28,14 @@ series:
       henderson: yes
       henderson_localic: yes
       henderson_robust: no
-      henderson_robus_localic: yes
+      henderson_robust_localic: yes
       clf_cn: yes
       clf_alf: no
+    plots:
+      normal: yes
+      confint: yes
+      lollypop: yes
+      implicit_forecasts: yes
   bc_transports:
     idbank: 001786553
     description: Indicateur synthétique du climat des affaires dans le transport (H)
@@ -50,9 +55,14 @@ series:
       henderson: yes
       henderson_localic: yes
       henderson_robust: no
-      henderson_robus_localic: yes
+      henderson_robust_localic: yes
       clf_cn: yes
       clf_alf: no
+    plots:
+      normal: yes
+      confint: yes
+      lollypop: yes
+      implicit_forecasts: yes
   bc_heb:
     idbank: 001786554
     description: Indicateur synthétique du climat des affaires dans l'hébergement-restauration
@@ -76,9 +86,14 @@ series:
       henderson: yes
       henderson_localic: yes
       henderson_robust: no
-      henderson_robus_localic: yes
+      henderson_robust_localic: yes
       clf_cn: yes
       clf_alf: no
+    plots:
+      normal: yes
+      confint: yes
+      lollypop: yes
+      implicit_forecasts: yes
   bc_info:
     idbank: 001786555
     description: Indicateur synthétique du climat des affaires dans l'information-communication
@@ -96,9 +111,14 @@ series:
       henderson: yes
       henderson_localic: yes
       henderson_robust: no
-      henderson_robus_localic: yes
+      henderson_robust_localic: yes
       clf_cn: yes
       clf_alf: no
+    plots:
+      normal: yes
+      confint: yes
+      lollypop: yes
+      implicit_forecasts: yes
   bc_immp:
     idbank: 001786556
     description: Indicateur synthétique du climat des affaires dans les activités
@@ -120,9 +140,14 @@ series:
       henderson: yes
       henderson_localic: yes
       henderson_robust: no
-      henderson_robus_localic: yes
+      henderson_robust_localic: yes
       clf_cn: yes
       clf_alf: no
+    plots:
+      normal: yes
+      confint: yes
+      lollypop: yes
+      implicit_forecasts: yes
   bc_actspec:
     idbank: 001786557
     description: Indicateur synthétique du climat des affaires dans les activités
@@ -144,9 +169,14 @@ series:
       henderson: yes
       henderson_localic: yes
       henderson_robust: no
-      henderson_robus_localic: yes
+      henderson_robust_localic: yes
       clf_cn: yes
       clf_alf: no
+    plots:
+      normal: yes
+      confint: yes
+      lollypop: yes
+      implicit_forecasts: yes
   bc_servadm:
     idbank: 001786558
     description: Indicateur synthétique du climat des affaires dans les services administratifs
@@ -167,6 +197,11 @@ series:
       henderson: yes
       henderson_localic: yes
       henderson_robust: no
-      henderson_robus_localic: yes
+      henderson_robust_localic: yes
       clf_cn: yes
       clf_alf: no
+    plots:
+      normal: yes
+      confint: yes
+      lollypop: yes
+      implicit_forecasts: yes

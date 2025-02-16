@@ -19,9 +19,14 @@ series:
       henderson: yes
       henderson_localic: yes
       henderson_robust: no
-      henderson_robus_localic: yes
+      henderson_robust_localic: yes
       clf_cn: yes
       clf_alf: no
+    plots:
+      normal: yes
+      confint: yes
+      lollypop: yes
+      implicit_forecasts: yes
   compre:
     idbank: 001580201
     description: Intentions de commandes pour les 3 prochains mois
@@ -38,9 +43,14 @@ series:
       henderson: yes
       henderson_localic: yes
       henderson_robust: no
-      henderson_robus_localic: yes
+      henderson_robust_localic: yes
       clf_cn: yes
       clf_alf: no
+    plots:
+      normal: yes
+      confint: yes
+      lollypop: yes
+      implicit_forecasts: yes
   ossk:
     idbank: 001580278
     description: Niveau du stock pour la période de l'année
@@ -54,9 +64,14 @@ series:
       henderson: yes
       henderson_localic: yes
       henderson_robust: no
-      henderson_robus_localic: yes
+      henderson_robust_localic: yes
       clf_cn: yes
       clf_alf: no
+    plots:
+      normal: yes
+      confint: yes
+      lollypop: yes
+      implicit_forecasts: yes
   tcapa:
     idbank: 001580317
     description: Évolution des affaires (ventes) au cours des 3 derniers mois
@@ -72,9 +87,14 @@ series:
       henderson: yes
       henderson_localic: yes
       henderson_robust: no
-      henderson_robus_localic: yes
+      henderson_robust_localic: yes
       clf_cn: yes
       clf_alf: no
+    plots:
+      normal: yes
+      confint: yes
+      lollypop: yes
+      implicit_forecasts: yes
   tcapre:
     idbank: 001580355
     description: Évolution probable des affaires (ventes) au cours des 3 prochains
@@ -92,6 +112,11 @@ series:
       henderson: yes
       henderson_localic: yes
       henderson_robust: no
-      henderson_robus_localic: yes
+      henderson_robust_localic: yes
       clf_cn: yes
       clf_alf: no
+    plots:
+      normal: yes
+      confint: yes
+      lollypop: yes
+      implicit_forecasts: yes

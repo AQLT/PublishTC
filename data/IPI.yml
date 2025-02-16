@@ -15,9 +15,14 @@ series:
       henderson: yes
       henderson_localic: yes
       henderson_robust: no
-      henderson_robus_localic: yes
+      henderson_robust_localic: yes
       clf_cn: yes
       clf_alf: no
+    plots:
+      normal: yes
+      confint: yes
+      lollypop: yes
+      implicit_forecasts: yes
   ipi_c1:
     idbank: 010768267
     description: Indice de production industrielle dans l'agro-alimentaire (C1)
@@ -34,9 +39,14 @@ series:
       henderson: yes
       henderson_localic: yes
       henderson_robust: no
-      henderson_robus_localic: yes
+      henderson_robust_localic: yes
       clf_cn: yes
       clf_alf: no
+    plots:
+      normal: yes
+      confint: yes
+      lollypop: yes
+      implicit_forecasts: yes
   ipi_c3:
     idbank: 010768271
     description: Indice de production industrielle dans les biens d'équipement (C3)
@@ -52,9 +62,14 @@ series:
       henderson: yes
       henderson_localic: yes
       henderson_robust: no
-      henderson_robus_localic: yes
+      henderson_robust_localic: yes
       clf_cn: yes
       clf_alf: no
+    plots:
+      normal: yes
+      confint: yes
+      lollypop: yes
+      implicit_forecasts: yes
   ipi_c4:
     idbank: 010768273
     description: Indice de production industrielle dans les matériels de transport
@@ -71,9 +86,14 @@ series:
       henderson: yes
       henderson_localic: yes
       henderson_robust: no
-      henderson_robus_localic: yes
+      henderson_robust_localic: yes
       clf_cn: yes
       clf_alf: no
+    plots:
+      normal: yes
+      confint: yes
+      lollypop: yes
+      implicit_forecasts: yes
   ipi_c5:
     idbank: 010768275
     description: Indice de production industrielle dans les autres industries (C5)
@@ -90,6 +110,11 @@ series:
       henderson: yes
       henderson_localic: yes
       henderson_robust: no
-      henderson_robus_localic: yes
+      henderson_robust_localic: yes
       clf_cn: yes
       clf_alf: no
+    plots:
+      normal: yes
+      confint: yes
+      lollypop: yes
+      implicit_forecasts: yes

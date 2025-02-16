@@ -19,9 +19,14 @@ series:
       henderson: yes
       henderson_localic: yes
       henderson_robust: no
-      henderson_robus_localic: yes
+      henderson_robust_localic: yes
       clf_cn: yes
       clf_alf: no
+    plots:
+      normal: yes
+      confint: yes
+      lollypop: yes
+      implicit_forecasts: yes
   ivv_45:
     idbank: 010769899
     description: Indice de volume des ventes dans le commerce et réparation d'automobiles
@@ -42,9 +47,14 @@ series:
       henderson: yes
       henderson_localic: yes
       henderson_robust: no
-      henderson_robus_localic: yes
+      henderson_robust_localic: yes
       clf_cn: yes
       clf_alf: no
+    plots:
+      normal: yes
+      confint: yes
+      lollypop: yes
+      implicit_forecasts: yes
   ivv_46:
     idbank: 010769901
     description: Indice de volume des ventes dans le commerce de gros, à l’exception
@@ -62,9 +72,14 @@ series:
       henderson: yes
       henderson_localic: yes
       henderson_robust: no
-      henderson_robus_localic: yes
+      henderson_robust_localic: yes
       clf_cn: yes
       clf_alf: no
+    plots:
+      normal: yes
+      confint: yes
+      lollypop: yes
+      implicit_forecasts: yes
   ivv_47:
     idbank: 010769903
     description: Indice de volume des ventes dans le commerce de détail, à l’exception
@@ -88,6 +103,11 @@ series:
       henderson: yes
       henderson_localic: yes
       henderson_robust: no
-      henderson_robus_localic: yes
+      henderson_robust_localic: yes
       clf_cn: yes
       clf_alf: no
+    plots:
+      normal: yes
+      confint: yes
+      lollypop: yes
+      implicit_forecasts: yes

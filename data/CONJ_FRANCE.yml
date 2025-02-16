@@ -24,9 +24,14 @@ series:
       henderson: yes
       henderson_localic: yes
       henderson_robust: no
-      henderson_robus_localic: yes
+      henderson_robust_localic: yes
       clf_cn: yes
       clf_alf: no
+    plots:
+      normal: yes
+      confint: yes
+      lollypop: yes
+      implicit_forecasts: yes
   ec_fr:
     idbank: 001796629
     description: Indicateur synthétique du climat de l'emploi France
@@ -50,6 +55,11 @@ series:
       henderson: yes
       henderson_localic: yes
       henderson_robust: no
-      henderson_robus_localic: yes
+      henderson_robust_localic: yes
       clf_cn: yes
       clf_alf: no
+    plots:
+      normal: yes
+      confint: yes
+      lollypop: yes
+      implicit_forecasts: yes
