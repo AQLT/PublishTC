@@ -1,0 +1,128 @@
+---
+title: "Untitled"
+format: html
+params:
+  file: "../data/IPI.yml"
+execute:
+  cache: true
+  
+echo: false
+eval: true
+---
+
+```{r}
+#| include: false
+library(publishTC)
+library(ggplot2)
+spec_data <- yaml::read_yaml(params$file)
+spec_series <- spec_data$series
+list_files <- list.files(path = tools::file_path_sans_ext(params$file),full.names = TRUE)
+all_data <- lapply(list_files, read.ts, list = TRUE)
+n <- length(all_data)
+series <- names(all_data[[1]])[1]
+```
+
+
+```{r}
+#| include: false
+series <- names(all_data[[1]])[1]
+spec_s <- spec_series[[series]]
+methods <- unlist(spec_s$methods)
+methods <- names(methods)[which(methods)]
+all_est <- lapply(all_data, function(data){
+	x <- window(data[[series]], start = spec_s$first_date)
+	smoothing(x = x, methods = methods, length = spec_s$length, 
+		  ao = spec_s$outliers$ao,
+		  ao_inv = spec_s$outliers$ao_inv,
+		  ls = spec_s$outliers$ls)
+})
+```
+
+
+# `{r} spec_series[[series]]$description` 
+
+```{r}
+#| results: asis
+est <- all_est[[n]]
+
+if (spec_s$plots$bymethods){
+	cat("## By methods")
+	for (methods in names(est)) {
+		first_date <- time(est[[methods]]$tc)[length(est[[methods]]$tc)] - spec_s$plots$nyears
+		range_y <- range(window(ts.union(est[[methods]]$tc, est[[methods]]$x), start = first_date))
+		cat(sprintf("\n### %s\n\n", methods))
+		cat("\n\n::::: {.panel-tabset}\n")
+		if (spec_s$plots$kind$normal) {
+			cat(sprintf("#### %s\n\n", "Plot"))
+			cat(knitr::knit_child(text = c(
+				"```{r}",
+				# sprintf("#| label: %s-1", methods),
+				'autoplot(est[[methods]]) +
+				theme_bw() + labs(x = NULL, y = NULL) +
+				theme(legend.title = element_blank(),legend.position = "bottom") +
+				coord_cartesian(xlim = c(first_date, NA), y = range_y)',
+				"```",
+				""
+			), envir = environment(), quiet = TRUE
+				))
+		}
+		
+		if (spec_s$plots$kind$confint) {
+			cat(sprintf("#### %s\n\n", "Confidence Intervals"))
+			cat(knitr::knit_child(text = c(
+				"```{r}",
+				# sprintf("#| label: %s-1", methods),
+				'ggconfint_plot(est[[methods]]) +
+				theme_bw() + labs(x = NULL, y = NULL) +
+				theme(legend.title = element_blank(),legend.position = "bottom") +
+				coord_cartesian(xlim = c(first_date, NA), y = range_y)',
+				"```",
+				""
+			), envir = environment(), quiet = TRUE
+				))
+		}
+		
+		if (spec_s$plots$kind$lollypop) {
+			cat(sprintf("#### %s\n\n", "Lollypop"))
+			cat(knitr::knit_child(text = c(
+				"```{r}",
+				# sprintf("#| label: %s-1", methods),
+				'gglollypop(est[[methods]]) +
+				theme_bw() + labs(x = NULL, y = NULL) +
+				theme(legend.title = element_blank(),legend.position = "bottom") +
+				coord_cartesian(xlim = c(first_date, NA), y = range_y)',
+				"```",
+				""
+			), envir = environment(), quiet = TRUE
+				))
+		}
+		
+		if (spec_s$plots$kind$implicit_forecasts) {
+			
+			cat(sprintf("#### %s\n\n", "Implicit forecast"))
+			cat(knitr::knit_child(text = c(
+				"```{r}",
+				# sprintf("#| label: %s-1", methods),
+				'ggimplicit_forecasts_plot(est[[methods]]) +
+				theme_bw() + labs(x = NULL, y = NULL) +
+				theme(legend.title = element_blank(),legend.position = "bottom") +
+				coord_cartesian(xlim = c(first_date, NA), y = range_y)',
+				"```",
+				""
+			), envir = environment(), quiet = TRUE
+				))
+		}
+		
+		cat("\n:::::\n")
+	}
+	
+}
+
+```
+
+
+
+```{r}
+#| results: asis
+cat("I'm raw **Markdown** content.\n")
+```
