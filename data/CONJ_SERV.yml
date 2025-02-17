@@ -32,10 +32,14 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes
   bc_transports:
     idbank: 001786553
     description: Indicateur synthétique du climat des affaires dans le transport (H)
@@ -59,10 +63,14 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes
   bc_heb:
     idbank: 001786554
     description: Indicateur synthétique du climat des affaires dans l'hébergement-restauration
@@ -90,10 +98,14 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes
   bc_info:
     idbank: 001786555
     description: Indicateur synthétique du climat des affaires dans l'information-communication
@@ -115,10 +127,14 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes
   bc_immp:
     idbank: 001786556
     description: Indicateur synthétique du climat des affaires dans les activités
@@ -144,10 +160,14 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes
   bc_actspec:
     idbank: 001786557
     description: Indicateur synthétique du climat des affaires dans les activités
@@ -173,10 +193,14 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes
   bc_servadm:
     idbank: 001786558
     description: Indicateur synthétique du climat des affaires dans les services administratifs
@@ -201,7 +225,11 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes

@@ -20,10 +20,14 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes
   ica_c1:
     idbank: 010771874
     description: Indice de chiffre d'affaires  dans l'agro-alimentaire (C1)
@@ -43,10 +47,14 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes
   ica_c3:
     idbank: '010772600'
     description: Indice de chiffre d'affaires  dans les biens d'équipement (C3)
@@ -72,10 +80,14 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes
   ica_c4:
     idbank: 010774178
     description: Indice de chiffre d'affaires  dans les matériels de transport (C4)
@@ -97,10 +109,14 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes
   ica_c5:
     idbank: '010771532'
     description: Indice de chiffre d'affaires  dans les autres industries (C5)
@@ -120,7 +136,11 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes

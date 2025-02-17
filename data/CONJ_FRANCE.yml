@@ -28,10 +28,14 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes
   ec_fr:
     idbank: 001796629
     description: Indicateur synthétique du climat de l'emploi France
@@ -59,7 +63,11 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes

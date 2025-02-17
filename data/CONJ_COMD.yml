@@ -23,10 +23,14 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes
   compre:
     idbank: 001580201
     description: Intentions de commandes pour les 3 prochains mois
@@ -47,10 +51,14 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes
   ossk:
     idbank: 001580278
     description: Niveau du stock pour la période de l'année
@@ -68,10 +76,14 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes
   tcapa:
     idbank: 001580317
     description: Évolution des affaires (ventes) au cours des 3 derniers mois
@@ -91,10 +103,14 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes
   tcapre:
     idbank: 001580355
     description: Évolution probable des affaires (ventes) au cours des 3 prochains
@@ -116,7 +132,11 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes

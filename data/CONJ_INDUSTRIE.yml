@@ -23,10 +23,14 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes
   bc_c1:
     idbank: 001786503
     description: Indicateur synthétique du climat des affaires dans l'agro-alimentaire
@@ -47,10 +51,14 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes
   bc_c3:
     idbank: 001786504
     description: Indicateur synthétique du climat des affaires dans les biens d'équipement
@@ -73,10 +81,14 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes
   bc_c4:
     idbank: 001786505
     description: Indicateur synthétique du climat des affaires dans les matériels
@@ -98,10 +110,14 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes
   bc_c5:
     idbank: 001786506
     description: Indicateur synthétique du climat des affaires dans les autres industries
@@ -123,10 +139,14 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes
   oscd:
     idbank: 001585942
     description: Niveau des carnets et de la demande
@@ -146,10 +166,14 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes
   oscde:
     idbank: 001585980
     description: Niveau des carnets et de la demande étrangère
@@ -169,10 +193,14 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes
   ossk:
     idbank: 001586017
     description: Niveau des stocks de produits fabriqués
@@ -190,10 +218,14 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes
   tppa:
     idbank: 001586064
     description: Tendance récente de la production
@@ -214,10 +246,14 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes
   tppre:
     idbank: 001586103
     description: Tendance probable de la production
@@ -238,10 +274,14 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes
   pgp:
     idbank: 001586052
     description: 'Perspectives générales : tendance probable du volume de la production
@@ -266,7 +306,11 @@ series:
       clf_cn: yes
       clf_alf: no
     plots:
-      normal: yes
-      confint: yes
-      lollypop: yes
-      implicit_forecasts: yes
+      nyears: 4.0
+      bymethods: yes
+      byking: yes
+      kind:
+        normal: yes
+        confint: yes
+        lollypop: yes
+        implicit_forecasts: yes
