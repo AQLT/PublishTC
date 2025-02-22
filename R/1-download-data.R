@@ -1,4 +1,5 @@
-source("R/0-functions.R")
+library(publishTC)
+# source("R/0-functions.R")
 for (spec in list.files("data", pattern = "yml$",full.names = TRUE)){
 	data <- yaml::read_yaml(spec)
 	if (!dir.exists(file.path("data", data$dataset)))
