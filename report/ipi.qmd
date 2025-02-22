@@ -1,6 +1,8 @@
 ---
-title: "Untitled"
-format: html
+format: 
+  html:
+    toc: true
+    number-sections: true
 params:
   file: "../data/IPI.yml"
 execute:
@@ -12,117 +14,238 @@ eval: true
 
 ```{r}
 #| include: false
+#| cache: false
 library(publishTC)
 library(ggplot2)
-spec_data <- yaml::read_yaml(params$file)
-spec_series <- spec_data$series
+library(patchwork)
+spec <- yaml::read_yaml(params$file)
+spec_series <- spec$series
 list_files <- list.files(path = tools::file_path_sans_ext(params$file),full.names = TRUE)
 all_data <- lapply(list_files, read.ts, list = TRUE)
 n <- length(all_data)
 series <- names(all_data[[1]])[1]
+
+studied_methods <- sapply(spec$methods, `[[`, "eval")
+names_methods <- sapply(spec$methods, `[[`, "name")[which(studied_methods)]
+studied_methods <- names(studied_methods)[which(studied_methods)]
+names(studied_methods) <- names_methods
+
+plots <- unlist(spec$plots$kind)
+plots <- names(plots)[which(plots)]
+digits <- spec$plots$revision_history$table$digits
+nrow_legend <- sum(c(any(plots %in% c("normal", "lollypop")), any(plots %in% c("implicit_forecast", "confint"))))
 ```
 
+---
+title: "`r spec$datasetname`"
+---
 
-```{r}
-#| include: false
-series <- names(all_data[[1]])[1]
-spec_s <- spec_series[[series]]
-methods <- unlist(spec_s$methods)
-methods <- names(methods)[which(methods)]
-all_est <- lapply(all_data, function(data){
-	x <- window(data[[series]], start = spec_s$first_date)
-	smoothing(x = x, methods = methods, length = spec_s$length, 
-		  ao = spec_s$outliers$ao,
-		  ao_inv = spec_s$outliers$ao_inv,
-		  ls = spec_s$outliers$ls)
-})
-```
-
-
-# `{r} spec_series[[series]]$description` 
 
 ```{r}
 #| results: asis
-est <- all_est[[n]]
 
-if (spec_s$plots$bymethods){
-	cat("## By methods")
-	for (methods in names(est)) {
-		first_date <- time(est[[methods]]$tc)[length(est[[methods]]$tc)] - spec_s$plots$nyears
-		range_y <- range(window(ts.union(est[[methods]]$tc, est[[methods]]$x), start = first_date))
-		cat(sprintf("\n### %s\n\n", methods))
+for (series in names(all_data[[1]])) {
+	spec_s <- spec_series[[series]]
+	all_est <- lapply(all_data, function(data){
+		x <- window(data[[series]], start = spec_s$first_date)
+		smoothing(x = x, methods = studied_methods, length = spec_s$length, 
+				  ao = spec_s$outliers$ao,
+				  ao_inv = spec_s$outliers$ao_inv,
+				  ls = spec_s$outliers$ls)
+	})
+	
+	last_est <- all_est[[n]]
+	all_plots <- lapply(last_est, function(est) {
+		plots_ <- ggsmoothing_plot(est, methods = plots)
+		if (any(c("implicit_forecast", "confint") %in% plots)) {
+			if ("normal" %in% plots) {
+				plots_$normal <- plots_$normal + theme(legend.position = element_blank())
+			}
+			if ("lollypop" %in% plots) {
+				plots_$lollypop <- plots_$lollypop + theme(legend.position = element_blank())
+			}
+		}
+		plots_
+	})
+	
+	
+	cat("# ", spec_series[[series]]$description, "\n")
+	if (spec$plots$bymethods$enabled){
+		cat("## ", spec$plots$bymethods$name)
 		cat("\n\n::::: {.panel-tabset}\n")
-		if (spec_s$plots$kind$normal) {
-			cat(sprintf("#### %s\n\n", "Plot"))
+		for (methods in names(last_est)) {
+			cat(sprintf("\n### %s\n\n", gsub("\n", " ", methods)))
+			first_date <- time(last_est[[methods]]$tc)[length(last_est[[methods]]$tc)] - spec$plots$nyears
+			range_y <- range(window(ts.union(last_est[[methods]]$tc, last_est[[methods]]$x), start = first_date))
 			cat(knitr::knit_child(text = c(
 				"```{r}",
-				# sprintf("#| label: %s-1", methods),
-				'autoplot(est[[methods]]) +
-				theme_bw() + labs(x = NULL, y = NULL) +
-				theme(legend.title = element_blank(),legend.position = "bottom") +
-				coord_cartesian(xlim = c(first_date, NA), y = range_y)',
-				"```",
-				""
+				"#| fig-height: 8",
+				"#| fig-width: 8",
+				'wrap_plots(all_plots[[methods]]) +
+			plot_layout(axes = "collect") &
+			theme_bw() & theme(legend.title = element_blank(), legend.position = "bottom") &
+			# guides(color=guide_legend(nrow=nrow_legend)) &
+			labs(x = NULL, y = NULL) &
+			coord_cartesian(xlim = c(first_date, NA), y = range_y)',
+			"```",
+			""
 			), envir = environment(), quiet = TRUE
-				))
+			))
+		}
+		cat("\n:::::\n\n")
+	}
+	
+	if (spec$plots$byplots$enabled){
+		byplots <- lapply(plots, function(kind) {
+			res <- lapply(names(all_plots), function(method) {
+				all_plots[[method]][[kind]] + ggtitle(method)
+			})
+			names(res) <- names(all_plots)
+			res
+		})
+		names(byplots) <- plots
+		
+		cat("## ", spec$plots$byplots$name)
+		cat("\n\n::::: {.panel-tabset}\n")
+		for (plot in names(byplots)) {
+			cat(sprintf("\n### %s\n\n", plot))
+			first_date <- time(last_est[[1]]$tc)[length(last_est[[1]]$tc)] - spec$plots$nyears
+			range_y <- range(window(ts.union(last_est[[1]]$tc, last_est[[1]]$x), start = first_date))
+			cat(knitr::knit_child(text = c(
+				"```{r}",
+				"#| fig-height: 8",
+				"#| fig-width: 8",
+				'wrap_plots(byplots[[plot]]) +
+			plot_layout(guides = "collect", axes = "collect") &
+			theme_bw() & theme(legend.title = element_blank(), legend.position = "bottom") &
+			labs(x = NULL, y = NULL) &
+			coord_cartesian(xlim = c(first_date, NA), y = range_y) ',
+			"```",
+			""
+			), envir = environment(), quiet = TRUE
+			))
 		}
 		
-		if (spec_s$plots$kind$confint) {
-			cat(sprintf("#### %s\n\n", "Confidence Intervals"))
-			cat(knitr::knit_child(text = c(
-				"```{r}",
-				# sprintf("#| label: %s-1", methods),
-				'ggconfint_plot(est[[methods]]) +
-				theme_bw() + labs(x = NULL, y = NULL) +
-				theme(legend.title = element_blank(),legend.position = "bottom") +
-				coord_cartesian(xlim = c(first_date, NA), y = range_y)',
-				"```",
-				""
-			), envir = environment(), quiet = TRUE
-				))
-		}
+		cat("\n:::::\n\n")
+	}
+	
+	
+	if (spec$plots$comparison_plot$enabled) {
 		
-		if (spec_s$plots$kind$lollypop) {
-			cat(sprintf("#### %s\n\n", "Lollypop"))
-			cat(knitr::knit_child(text = c(
-				"```{r}",
-				# sprintf("#| label: %s-1", methods),
-				'gglollypop(est[[methods]]) +
-				theme_bw() + labs(x = NULL, y = NULL) +
-				theme(legend.title = element_blank(),legend.position = "bottom") +
-				coord_cartesian(xlim = c(first_date, NA), y = range_y)',
-				"```",
-				""
-			), envir = environment(), quiet = TRUE
-				))
-		}
+		cat("## ", spec$plots$comparison_plot$name)
 		
-		if (spec_s$plots$kind$implicit_forecasts) {
-			
-			cat(sprintf("#### %s\n\n", "Implicit forecast"))
-			cat(knitr::knit_child(text = c(
+		data_comp <- do.call(ts.union, lapply(last_est, `[[`, "tc"))
+		first_date <- time(last_est[[1]]$tc)[length(last_est[[1]]$tc)] - spec$plots$nyears
+		range_y <- range(unlist(lapply(last_est, function(x) range(window(ts.union(x$tc), start = first_date)))))
+		cat("\n\n::::: {.panel-tabset}\n")
+		
+		cat("\n### Short\n")
+		cat(knitr::knit_child(text = c(
 				"```{r}",
-				# sprintf("#| label: %s-1", methods),
-				'ggimplicit_forecasts_plot(est[[methods]]) +
-				theme_bw() + labs(x = NULL, y = NULL) +
-				theme(legend.title = element_blank(),legend.position = "bottom") +
-				coord_cartesian(xlim = c(first_date, NA), y = range_y)',
-				"```",
-				""
+				"#| fig-height: 8",
+				"#| fig-width: 8",
+				'autoplot(data_comp) +
+			theme_bw() + theme(legend.title = element_blank(), legend.position = "bottom") +
+			labs(x = NULL, y = NULL) +
+			coord_cartesian(xlim = c(first_date, NA), y = range_y) ',
+			"```",
+			""
 			), envir = environment(), quiet = TRUE
-				))
-		}
+			))
+		cat("\n### All\n")
+		
+		cat(knitr::knit_child(text = c(
+			"```{r}",
+			"#| fig-height: 8",
+			"#| fig-width: 8",
+			'p <- autoplot(data_comp) +
+	theme_bw() + theme(legend.title = element_blank(), legend.position = "bottom") +
+	labs(x = NULL, y = NULL)',
+	ifelse(spec$plots$comparison_plot$interactive, 'plotly::ggplotly(p)', 'p'),
+	"```",
+	""
+		), envir = environment(), quiet = TRUE
+		))
 		
 		cat("\n:::::\n")
 	}
 	
+	if (spec$plots$revision_history$enabled) {
+		rev_data <- lapply(names(studied_methods), function(method) {
+			data <- lapply(all_est, function(x) x[[method]]$tc)
+			names(data) <- sapply(data, function(x) {
+				last_date <- format(zoo::as.Date(time(x)), "%Y-%m")
+				last_date[length(last_date)]
+				})
+			do.call(ts.union, rev(data))
+		})
+		names(rev_data) <- names(studied_methods)
+		
+		rev_x <- rev(lapply(all_est, function(x) x[[1]]$x))
+		names(rev_x) <- sapply(rev_x, function(x) {
+			last_date <- format(zoo::as.Date(time(x)), "%Y-%m")
+			last_date[length(last_date)]
+		})
+		rev_x <- do.call(ts.union, rev_x)
+		rev_data <- c(list("Raw data" = rev_x), rev_data)
+		
+		
+		
+		cat("## ", spec$plots$revision_history$name)
+		
+		cat("\n\n::::: {.panel-tabset}\n")
+		for (methods in names(rev_data)) {
+			cat(sprintf("\n### %s\n\n", gsub("\n", " ", methods)))
+			first_date <- time(rev_data[[methods]])[length(time(rev_data[[methods]]))] - spec$plots$nyears
+			range_y <- range(window(rev_data[[methods]], start = first_date), na.rm = TRUE)
+			cat(knitr::knit_child(text = c(
+				"```{r}",
+				"#| fig-height: 8",
+				"#| fig-width: 8",
+				'autoplot(round(rev_data[[methods]], digits)) +
+			theme_bw() + theme(legend.title = element_blank(), legend.position = "bottom") +
+			labs(x = NULL, y = NULL) +
+			coord_cartesian(xlim = c(first_date, NA), y = range_y)',
+			"```",
+			""
+			), envir = environment(), quiet = TRUE
+			))
+		}
+		
+		cat("\n:::::\n")
+		
+		if (spec$plots$revision_history$table$enabled) {
+			data_rev <- t(round(do.call(ts.union, rev_data), digits))
+			data_rev <- data_rev[,ncol(data_rev):1]
+			data_rev <- data.frame(`Last date` = rep(colnames(rev_data[[1]]), length(rev_data)),
+								   Methods = rep(names(rev_data), each = ncol(rev_x)), 
+								   data_rev,
+								   check.names = FALSE)
+			colnames(data_rev)[-(1:2)] <- rev(format(zoo::as.Date(time(rev_data[[1]])), "%Y-%m"))
+			rownames(data_rev) <- NULL
+			
+			cat(knitr::knit_child(text = c(
+				"```{r}",
+				"#| fig-height: 8",
+				"#| fig-width: 8",
+				'DT::datatable(
+	data_rev[,-1],
+	extensions = c("RowGroup", "Buttons"),
+	options = list(
+		rowGroup = list(dataSrc =1),
+		columnDefs = list(list(targets = 1, visible = FALSE)),
+		dom = "Bfrtip",
+		buttons = c("copy", "csv", "excel", "pdf")
+	),
+	selection = "none",rownames = data_rev[,1]
+)',
+			"```",
+			""
+			), envir = environment(), quiet = TRUE
+			))
+		}
+	}
 }
-
 ```
 
 
-
-```{r}
-#| results: asis
-cat("I'm raw **Markdown** content.\n")
-```
