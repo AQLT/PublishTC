@@ -1,5 +1,5 @@
 dataset: CONJ_SERV
-datasetname: CONJ_SERV
+datasetname: Enquête de conjoncture dans les services
 series:
   bc_serv:
     idbank: 001587025

@@ -1,9 +1,9 @@
 dataset: ICA_ind
-datasetname: ICA_ind
+datasetname: Indice de chiffre d'affaires
 series:
   ica_cz:
     idbank: '010772026'
-    description: Indice de chiffre d'affaires  dans l'industrie manufacturière (CZ)
+    description: Industrie manufacturière (CZ)
     outliers:
       ao:
       - 2020.25
@@ -14,7 +14,7 @@ series:
     length: 13.0
   ica_c1:
     idbank: 010771874
-    description: Indice de chiffre d'affaires  dans l'agro-alimentaire (C1)
+    description: Agro-alimentaire (C1)
     outliers:
       ao: ~
       aoinv: ~
@@ -25,7 +25,7 @@ series:
     length: 13.0
   ica_c3:
     idbank: '010772600'
-    description: Indice de chiffre d'affaires  dans les biens d'équipement (C3)
+    description: Biens d'équipement (C3)
     outliers:
       ao:
       - 2020.25
@@ -42,7 +42,7 @@ series:
     length: 13.0
   ica_c4:
     idbank: 010774178
-    description: Indice de chiffre d'affaires  dans les matériels de transport (C4)
+    description: Matériels de transport (C4)
     outliers:
       ao:
       - 2020.25
@@ -55,7 +55,7 @@ series:
     length: 13.0
   ica_c5:
     idbank: '010771532'
-    description: Indice de chiffre d'affaires  dans les autres industries (C5)
+    description: Autres industries (C5)
     outliers:
       ao: 2020.25
       aoinv: ~

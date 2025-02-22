@@ -1,19 +1,22 @@
 dataset: IPI
-datasetname: IPI
+datasetname: Indice de production industrielle
 series:
   ipi_cz:
     idbank: 010768307
-    description: Indice de production industrielle dans l'industrie manufacturière
-      (CZ)
+    description: Industrie manufacturière (CZ)
     outliers:
-      ao: ~
+      ao:
+      - 2020.25
+      - 2020.4166667
       aoinv: ~
-      ls: ~
+      ls:
+      - 2020.1666667
+      - 2020.4166667
     first_date: 2012.0
     length: 13.0
   ipi_c1:
     idbank: 010768267
-    description: Indice de production industrielle dans l'agro-alimentaire (C1)
+    description: Agro-alimentaire (C1)
     outliers:
       ao:
       - 2013.4166667
@@ -25,7 +28,7 @@ series:
     length: 13.0
   ipi_c3:
     idbank: 010768271
-    description: Indice de production industrielle dans les biens d'équipement (C3)
+    description: Biens d'équipement (C3)
     outliers:
       ao: 2020.25
       aoinv: ~
@@ -36,8 +39,7 @@ series:
     length: 13.0
   ipi_c4:
     idbank: 010768273
-    description: Indice de production industrielle dans les matériels de transport
-      (C4)
+    description: Matériels de transport (C4)
     outliers:
       ao:
       - 2020.25
@@ -48,7 +50,7 @@ series:
     length: 13.0
   ipi_c5:
     idbank: 010768275
-    description: Indice de production industrielle dans les autres industries (C5)
+    description: Autres industries (C5)
     outliers:
       ao: 2020.25
       aoinv: ~

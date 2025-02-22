@@ -1,5 +1,5 @@
 dataset: CONJ_FRANCE
-datasetname: CONJ_FRANCE
+datasetname: Climats des affaires France
 series:
   bc_fr:
     idbank: '001565530'
