@@ -15,22 +15,6 @@ series:
       - 2021.25
     first_date: 2012.0
     length: 13.0
-    methods:
-      henderson: yes
-      henderson_localic: yes
-      henderson_robust: no
-      henderson_robust_localic: yes
-      clf_cn: yes
-      clf_alf: no
-    plots:
-      nyears: 4.0
-      bymethods: yes
-      byking: yes
-      kind:
-        normal: yes
-        confint: yes
-        lollypop: yes
-        implicit_forecasts: yes
   bc_c1:
     idbank: 001786503
     description: Indicateur synthétique du climat des affaires dans l'agro-alimentaire
@@ -43,22 +27,6 @@ series:
       - 2021.3333333
     first_date: 2012.0
     length: 13.0
-    methods:
-      henderson: yes
-      henderson_localic: yes
-      henderson_robust: no
-      henderson_robust_localic: yes
-      clf_cn: yes
-      clf_alf: no
-    plots:
-      nyears: 4.0
-      bymethods: yes
-      byking: yes
-      kind:
-        normal: yes
-        confint: yes
-        lollypop: yes
-        implicit_forecasts: yes
   bc_c3:
     idbank: 001786504
     description: Indicateur synthétique du climat des affaires dans les biens d'équipement
@@ -73,22 +41,6 @@ series:
       - 2021.25
     first_date: 2012.0
     length: 13.0
-    methods:
-      henderson: yes
-      henderson_localic: yes
-      henderson_robust: no
-      henderson_robust_localic: yes
-      clf_cn: yes
-      clf_alf: no
-    plots:
-      nyears: 4.0
-      bymethods: yes
-      byking: yes
-      kind:
-        normal: yes
-        confint: yes
-        lollypop: yes
-        implicit_forecasts: yes
   bc_c4:
     idbank: 001786505
     description: Indicateur synthétique du climat des affaires dans les matériels
@@ -102,22 +54,6 @@ series:
       - 2022.0
     first_date: 2012.0
     length: 13.0
-    methods:
-      henderson: yes
-      henderson_localic: yes
-      henderson_robust: no
-      henderson_robust_localic: yes
-      clf_cn: yes
-      clf_alf: no
-    plots:
-      nyears: 4.0
-      bymethods: yes
-      byking: yes
-      kind:
-        normal: yes
-        confint: yes
-        lollypop: yes
-        implicit_forecasts: yes
   bc_c5:
     idbank: 001786506
     description: Indicateur synthétique du climat des affaires dans les autres industries
@@ -131,22 +67,6 @@ series:
       - 2020.9166667
     first_date: 2012.0
     length: 13.0
-    methods:
-      henderson: yes
-      henderson_localic: yes
-      henderson_robust: no
-      henderson_robust_localic: yes
-      clf_cn: yes
-      clf_alf: no
-    plots:
-      nyears: 4.0
-      bymethods: yes
-      byking: yes
-      kind:
-        normal: yes
-        confint: yes
-        lollypop: yes
-        implicit_forecasts: yes
   oscd:
     idbank: 001585942
     description: Niveau des carnets et de la demande
@@ -158,22 +78,6 @@ series:
       - 2020.5833333
     first_date: 2012.0
     length: 13.0
-    methods:
-      henderson: yes
-      henderson_localic: yes
-      henderson_robust: no
-      henderson_robust_localic: yes
-      clf_cn: yes
-      clf_alf: no
-    plots:
-      nyears: 4.0
-      bymethods: yes
-      byking: yes
-      kind:
-        normal: yes
-        confint: yes
-        lollypop: yes
-        implicit_forecasts: yes
   oscde:
     idbank: 001585980
     description: Niveau des carnets et de la demande étrangère
@@ -185,22 +89,6 @@ series:
       - 2020.6666667
     first_date: 2012.0
     length: 13.0
-    methods:
-      henderson: yes
-      henderson_localic: yes
-      henderson_robust: no
-      henderson_robust_localic: yes
-      clf_cn: yes
-      clf_alf: no
-    plots:
-      nyears: 4.0
-      bymethods: yes
-      byking: yes
-      kind:
-        normal: yes
-        confint: yes
-        lollypop: yes
-        implicit_forecasts: yes
   ossk:
     idbank: 001586017
     description: Niveau des stocks de produits fabriqués
@@ -210,22 +98,6 @@ series:
       ls: ~
     first_date: 2012.0
     length: 13.0
-    methods:
-      henderson: yes
-      henderson_localic: yes
-      henderson_robust: no
-      henderson_robust_localic: yes
-      clf_cn: yes
-      clf_alf: no
-    plots:
-      nyears: 4.0
-      bymethods: yes
-      byking: yes
-      kind:
-        normal: yes
-        confint: yes
-        lollypop: yes
-        implicit_forecasts: yes
   tppa:
     idbank: 001586064
     description: Tendance récente de la production
@@ -238,22 +110,6 @@ series:
       - 2020.5833333
     first_date: 2012.0
     length: 13.0
-    methods:
-      henderson: yes
-      henderson_localic: yes
-      henderson_robust: no
-      henderson_robust_localic: yes
-      clf_cn: yes
-      clf_alf: no
-    plots:
-      nyears: 4.0
-      bymethods: yes
-      byking: yes
-      kind:
-        normal: yes
-        confint: yes
-        lollypop: yes
-        implicit_forecasts: yes
   tppre:
     idbank: 001586103
     description: Tendance probable de la production
@@ -266,22 +122,6 @@ series:
       ls: 2020.4166667
     first_date: 2012.0
     length: 13.0
-    methods:
-      henderson: yes
-      henderson_localic: yes
-      henderson_robust: no
-      henderson_robust_localic: yes
-      clf_cn: yes
-      clf_alf: no
-    plots:
-      nyears: 4.0
-      bymethods: yes
-      byking: yes
-      kind:
-        normal: yes
-        confint: yes
-        lollypop: yes
-        implicit_forecasts: yes
   pgp:
     idbank: 001586052
     description: 'Perspectives générales : tendance probable du volume de la production
@@ -298,19 +138,47 @@ series:
       - 2022.1666667
     first_date: 2012.0
     length: 13.0
-    methods:
-      henderson: yes
-      henderson_localic: yes
-      henderson_robust: no
-      henderson_robust_localic: yes
-      clf_cn: yes
-      clf_alf: no
-    plots:
-      nyears: 4.0
-      bymethods: yes
-      byking: yes
-      kind:
-        normal: yes
-        confint: yes
-        lollypop: yes
-        implicit_forecasts: yes
+methods:
+  henderson:
+    name: Henderson
+    eval: yes
+  henderson_localic:
+    name: Henderson local I/C
+    eval: yes
+  henderson_robust:
+    name: Henderson (robust)
+    eval: yes
+  henderson_robust_localic:
+    name: |-
+      Henderson (robust)
+      local I/C
+    eval: yes
+  clf_cn:
+    name: CLF and cut-and-normalize
+    eval: yes
+  clf_alf:
+    name: CLF and alf
+    eval: no
+plots:
+  nyears: 4.0
+  bymethods:
+    enabled: yes
+    name: By methods
+  byplots:
+    enabled: yes
+    name: By kind of plots
+  kind:
+    normal: yes
+    confint: yes
+    lollypop: yes
+    implicit_forecasts: yes
+  comparison_plot:
+    enabled: yes
+    interactive: yes
+    name: Comparison of methods
+  revision_history:
+    enabled: yes
+    name: Analysis of revisions
+    table:
+      enabled: yes
+      digits: yes
