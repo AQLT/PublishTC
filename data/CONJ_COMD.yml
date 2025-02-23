@@ -7,7 +7,7 @@ series:
       détails
     outliers:
       ao: 2020.8333333
-      aoinv: ~
+      ao_inv: ~
       ls:
       - 2020.1666667
       - 2020.25
@@ -23,7 +23,7 @@ series:
       - 2020.25
       - 2020.3333333
       - 2020.8333333
-      aoinv: ~
+      ao_inv: ~
       ls: ~
     first_date: 2012.0
     length: 13.0
@@ -32,7 +32,7 @@ series:
     description: Niveau du stock pour la période de l'année
     outliers:
       ao: ~
-      aoinv: ~
+      ao_inv: ~
       ls: ~
     first_date: 2012.0
     length: 13.0
@@ -41,7 +41,7 @@ series:
     description: Évolution des affaires (ventes) au cours des 3 derniers mois
     outliers:
       ao: ~
-      aoinv: ~
+      ao_inv: ~
       ls:
       - 2020.3333333
       - 2020.5833333
@@ -56,7 +56,7 @@ series:
       - 2020.25
       - 2020.3333333
       - 2020.8333333
-      aoinv: ~
+      ao_inv: ~
       ls: 2021.3333333
     first_date: 2012.0
     length: 13.0

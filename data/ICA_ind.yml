@@ -8,7 +8,7 @@ series:
       ao:
       - 2020.25
       - 2020.3333333
-      aoinv: ~
+      ao_inv: ~
       ls: 2020.1666667
     first_date: 2012.0
     length: 13.0
@@ -17,7 +17,7 @@ series:
     description: Agro-alimentaire (C1)
     outliers:
       ao: ~
-      aoinv: ~
+      ao_inv: ~
       ls:
       - 2020.25
       - 2020.4166667
@@ -33,7 +33,7 @@ series:
       - 2023.1666667
       - 2023.3333333
       - 2024.25
-      aoinv: ~
+      ao_inv: ~
       ls:
       - 2020.1666667
       - 2020.4166667
@@ -47,7 +47,7 @@ series:
       ao:
       - 2020.25
       - 2020.3333333
-      aoinv: ~
+      ao_inv: ~
       ls:
       - 2020.1666667
       - 2021.9166667
@@ -58,7 +58,7 @@ series:
     description: Autres industries (C5)
     outliers:
       ao: 2020.25
-      aoinv: ~
+      ao_inv: ~
       ls:
       - 2020.1666667
       - 2020.4166667

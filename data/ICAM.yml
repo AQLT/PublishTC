@@ -6,7 +6,7 @@ series:
     description: Indicateur synthétique de confiance des ménages
     outliers:
       ao: ~
-      aoinv: ~
+      ao_inv: ~
       ls: 2020.25
     first_date: 2012.0
     length: 13.0
@@ -15,7 +15,7 @@ series:
     description: Situation financière future
     outliers:
       ao: ~
-      aoinv: ~
+      ao_inv: ~
       ls:
       - 2020.25
       - 2020.4166667
@@ -27,7 +27,7 @@ series:
     description: Évolution passée des prix
     outliers:
       ao: 2020.25
-      aoinv: ~
+      ao_inv: ~
       ls: 2019.0
     first_date: 2012.0
     length: 13.0
@@ -36,7 +36,7 @@ series:
     description: Intentions d'achats de logements
     outliers:
       ao: ~
-      aoinv: ~
+      ao_inv: ~
       ls: ~
     first_date: 2012.0
     length: 13.0
@@ -45,7 +45,7 @@ series:
     description: Évolution future du chômage
     outliers:
       ao: ~
-      aoinv: ~
+      ao_inv: ~
       ls: 2020.25
     first_date: 2012.0
     length: 13.0
@@ -54,7 +54,7 @@ series:
     description: Capacité d'épargne future
     outliers:
       ao: ~
-      aoinv: ~
+      ao_inv: ~
       ls: ~
     first_date: 2012.0
     length: 13.0
@@ -63,7 +63,7 @@ series:
     description: Opportunité d'épargner
     outliers:
       ao: 2015.5833333
-      aoinv: ~
+      ao_inv: ~
       ls: ~
     first_date: 2012.0
     length: 13.0
@@ -72,7 +72,7 @@ series:
     description: Dépenses d'aménagement du logement
     outliers:
       ao: 2020.25
-      aoinv: ~
+      ao_inv: ~
       ls: ~
     first_date: 2012.0
     length: 13.0
@@ -81,7 +81,7 @@ series:
     description: Niveau de vie futur en France
     outliers:
       ao: 2020.8333333
-      aoinv: ~
+      ao_inv: ~
       ls:
       - 2020.25
       - 2022.1666667
@@ -100,7 +100,7 @@ series:
       - 2020.3333333
       - 2020.8333333
       - 2021.4166667
-      aoinv: ~
+      ao_inv: ~
       ls: ~
     first_date: 2012.0
     length: 13.0
@@ -109,7 +109,7 @@ series:
     description: Niveau de vie passé en France
     outliers:
       ao: ~
-      aoinv: ~
+      ao_inv: ~
       ls: 2020.3333333
     first_date: 2012.0
     length: 13.0
@@ -118,7 +118,7 @@ series:
     description: Capacité d'épargne actuelle
     outliers:
       ao: ~
-      aoinv: ~
+      ao_inv: ~
       ls: 2015.3333333
     first_date: 2012.0
     length: 13.0
@@ -127,7 +127,7 @@ series:
     description: Achats de biens d'équipement prévus
     outliers:
       ao: ~
-      aoinv: ~
+      ao_inv: ~
       ls: 2012.5
     first_date: 2012.0
     length: 13.0
@@ -136,7 +136,7 @@ series:
     description: Situation financière passée
     outliers:
       ao: 2016.5
-      aoinv: ~
+      ao_inv: ~
       ls: 2013.3333333
     first_date: 2012.0
     length: 13.0
@@ -147,7 +147,7 @@ series:
       ao:
       - 2019.0
       - 2020.25
-      aoinv: ~
+      ao_inv: ~
       ls: 2022.1666667
     first_date: 2012.0
     length: 13.0
@@ -156,7 +156,7 @@ series:
     description: Intentions d'achats de voitures
     outliers:
       ao: ~
-      aoinv: ~
+      ao_inv: ~
       ls: ~
     first_date: 2012.0
     length: 13.0

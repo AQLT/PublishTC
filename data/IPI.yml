@@ -8,7 +8,7 @@ series:
       ao:
       - 2020.25
       - 2020.4166667
-      aoinv: ~
+      ao_inv: ~
       ls:
       - 2020.1666667
       - 2020.4166667
@@ -22,7 +22,7 @@ series:
       - 2013.4166667
       - 2020.25
       - 2020.3333333
-      aoinv: ~
+      ao_inv: ~
       ls: ~
     first_date: 2012.0
     length: 13.0
@@ -31,7 +31,7 @@ series:
     description: Biens d'équipement (C3)
     outliers:
       ao: 2020.25
-      aoinv: ~
+      ao_inv: ~
       ls:
       - 2020.1666667
       - 2020.4166667
@@ -44,7 +44,7 @@ series:
       ao:
       - 2020.25
       - 2020.3333333
-      aoinv: ~
+      ao_inv: ~
       ls: 2020.1666667
     first_date: 2012.0
     length: 13.0
@@ -53,7 +53,7 @@ series:
     description: Autres industries (C5)
     outliers:
       ao: 2020.25
-      aoinv: ~
+      ao_inv: ~
       ls:
       - 2020.1666667
       - 2020.4166667
