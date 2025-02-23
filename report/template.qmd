@@ -3,11 +3,12 @@ format:
   html:
     toc: true
     number-sections: true
+    embed-ressources: true
 params:
   file: "../data/IPI.yml"
 execute:
   cache: true
-  
+
 echo: false
 eval: true
 ---
@@ -20,8 +21,12 @@ library(ggplot2)
 library(patchwork)
 spec <- yaml::read_yaml(params$file)
 spec_series <- spec$series
-list_files <- list.files(path = tools::file_path_sans_ext(params$file),full.names = TRUE)
+list_files <- list.files(pattern = "csv$", path = data_path, full.names = TRUE, include.dirs = FALSE)
 all_data <- lapply(list_files, read.ts, list = TRUE)
+if (!spec$plots$revision_history$enabled) {
+	# we keep last data
+	all_data[length(all_data)]
+}
 n <- length(all_data)
 series <- names(all_data[[1]])[1]
 
@@ -50,13 +55,13 @@ for (series in names(all_data[[1]])) {
 		x <- window(data[[series]], start = spec_s$first_date)
 		smoothing(x = x, methods = studied_methods, length = spec_s$length, 
 				  ao = spec_s$outliers$ao,
-				  ao_inv = spec_s$outliers$ao_inv,
+				  ao_tc = spec_s$outliers$ao_tc,
 				  ls = spec_s$outliers$ls)
 	})
 	
 	last_est <- all_est[[n]]
 	all_plots <- lapply(last_est, function(est) {
-		plots_ <- ggsmoothing_plot(est, methods = plots)
+		plots_ <- ggsmoothing_plot(est, plots = plots)
 		if (any(c("implicit_forecast", "confint") %in% plots)) {
 			if ("normal" %in% plots) {
 				plots_$normal <- plots_$normal + theme(legend.position = element_blank())
