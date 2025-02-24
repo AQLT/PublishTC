@@ -136,7 +136,7 @@ for (f in files){
 				eval = TRUE),
 			henderson_robust = list(
 				name = "Henderson (robust)",
-				eval = TRUE),
+				eval = FALSE),
 			henderson_robust_localic = list(
 				name = "Henderson (robust)\nlocal I/C",
 				eval = TRUE),
