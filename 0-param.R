@@ -170,7 +170,8 @@ for (f in files){
 			 	name = "Analysis of revisions",
 			 	table = list(
 			 		enabled = TRUE,
-			 		digits = TRUE
+			 		digits = 2,
+			 		contribution_of_sa = TRUE
 			 	)
 			 	)
 		)
