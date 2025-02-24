@@ -130,7 +130,7 @@ methods:
     eval: yes
   henderson_robust:
     name: Henderson (robust)
-    eval: yes
+    eval: no
   henderson_robust_localic:
     name: |-
       Henderson (robust)
@@ -164,4 +164,5 @@ plots:
     name: Analysis of revisions
     table:
       enabled: yes
-      digits: yes
+      digits: 2.0
+      contribution_of_sa: yes

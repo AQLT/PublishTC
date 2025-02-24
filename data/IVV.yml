@@ -3,7 +3,7 @@ datasetname: Indice de volume des ventes
 series:
   ivv_commerce:
     idbank: 010769897
-    description:  Commerce, la réparation d’automobiles et de motocycles (G)
+    description: Commerce, la réparation d’automobiles et de motocycles (G)
     outliers:
       ao:
       - 2020.1666667
@@ -31,7 +31,8 @@ series:
     length: 13.0
   ivv_46:
     idbank: 010769901
-    description: Commerce de gros, à l’exception des automobiles et des motocycles (46)
+    description: Commerce de gros, à l’exception des automobiles et des motocycles
+      (46)
     outliers:
       ao: 2020.25
       ao_inv: ~
@@ -43,7 +44,8 @@ series:
     length: 13.0
   ivv_47:
     idbank: 010769903
-    description: Commerce de détail, à l’exception des automobiles et des motocycles (47)
+    description: Commerce de détail, à l’exception des automobiles et des motocycles
+      (47)
     outliers:
       ao:
       - 2015.8333333
@@ -68,7 +70,7 @@ methods:
     eval: yes
   henderson_robust:
     name: Henderson (robust)
-    eval: yes
+    eval: no
   henderson_robust_localic:
     name: |-
       Henderson (robust)
@@ -102,4 +104,5 @@ plots:
     name: Analysis of revisions
     table:
       enabled: yes
-      digits: yes
+      digits: 2.0
+      contribution_of_sa: yes
