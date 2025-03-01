@@ -13,7 +13,7 @@ series:
       - 2021.0833333
       - 2022.0833333
       - 2024.5
-      ao_inv: ~
+      ao_tc: ~
       ls:
       - 2020.1666667
       - 2020.25
@@ -33,7 +33,7 @@ series:
       - 2020.3333333
       - 2020.5833333
       - 2020.8333333
-      ao_inv: ~
+      ao_tc: ~
       ls:
       - 2020.1666667
       - 2021.3333333
@@ -49,7 +49,7 @@ series:
       - 2021.5
       - 2021.9166667
       - 2022.0
-      ao_inv: ~
+      ao_tc: ~
       ls:
       - 2020.1666667
       - 2020.25
@@ -64,7 +64,7 @@ series:
       (J)
     outliers:
       ao: ~
-      ao_inv: ~
+      ao_tc: ~
       ls:
       - 2020.25
       - 2020.4166667
@@ -77,7 +77,7 @@ series:
       immobilières (L)
     outliers:
       ao: ~
-      ao_inv: ~
+      ao_tc: ~
       ls:
       - 2017.8333333
       - 2020.1666667
@@ -97,7 +97,7 @@ series:
       - 2020.3333333
       - 2020.4166667
       - 2020.8333333
-      ao_inv: ~
+      ao_tc: ~
       ls:
       - 2020.1666667
       - 2020.25
@@ -111,7 +111,7 @@ series:
       et de soutien (N)
     outliers:
       ao: 2020.8333333
-      ao_inv: ~
+      ao_tc: ~
       ls:
       - 2020.1666667
       - 2020.25
@@ -144,6 +144,7 @@ methods:
     eval: no
 plots:
   nyears: 4.0
+  digits: 2.0
   bymethods:
     enabled: yes
     name: By methods
@@ -164,5 +165,7 @@ plots:
     name: Analysis of revisions
     table:
       enabled: yes
-      digits: 2.0
       contribution_of_sa: yes
+  extra_info:
+    enabled: yes
+    name: Extra informations

@@ -7,7 +7,7 @@ series:
       (CZ)
     outliers:
       ao: ~
-      ao_inv: ~
+      ao_tc: ~
       ls:
       - 2020.25
       - 2020.4166667
@@ -21,7 +21,7 @@ series:
       (C1)
     outliers:
       ao: ~
-      ao_inv: ~
+      ao_tc: ~
       ls:
       - 2020.25
       - 2021.3333333
@@ -33,7 +33,7 @@ series:
       (C3)
     outliers:
       ao: ~
-      ao_inv: ~
+      ao_tc: ~
       ls:
       - 2020.25
       - 2020.5
@@ -47,7 +47,7 @@ series:
       de transport (C4)
     outliers:
       ao: 2024.75
-      ao_inv: ~
+      ao_tc: ~
       ls:
       - 2020.25
       - 2020.5833333
@@ -60,7 +60,7 @@ series:
       (C5)
     outliers:
       ao: ~
-      ao_inv: ~
+      ao_tc: ~
       ls:
       - 2020.25
       - 2020.5833333
@@ -72,7 +72,7 @@ series:
     description: Niveau des carnets et de la demande
     outliers:
       ao: ~
-      ao_inv: ~
+      ao_tc: ~
       ls:
       - 2020.25
       - 2020.5833333
@@ -83,7 +83,7 @@ series:
     description: Niveau des carnets et de la demande étrangère
     outliers:
       ao: ~
-      ao_inv: ~
+      ao_tc: ~
       ls:
       - 2020.25
       - 2020.6666667
@@ -94,7 +94,7 @@ series:
     description: Niveau des stocks de produits fabriqués
     outliers:
       ao: ~
-      ao_inv: ~
+      ao_tc: ~
       ls: ~
     first_date: 2012.0
     length: 13.0
@@ -103,7 +103,7 @@ series:
     description: Tendance récente de la production
     outliers:
       ao: ~
-      ao_inv: ~
+      ao_tc: ~
       ls:
       - 2020.25
       - 2020.3333333
@@ -118,7 +118,7 @@ series:
       - 2020.25
       - 2020.8333333
       - 2023.5
-      ao_inv: ~
+      ao_tc: ~
       ls: 2020.4166667
     first_date: 2012.0
     length: 13.0
@@ -130,7 +130,7 @@ series:
       ao:
       - 2020.25
       - 2020.8333333
-      ao_inv: ~
+      ao_tc: ~
       ls:
       - 2020.1666667
       - 2020.4166667
@@ -161,6 +161,7 @@ methods:
     eval: no
 plots:
   nyears: 4.0
+  digits: 2.0
   bymethods:
     enabled: yes
     name: By methods
@@ -181,5 +182,7 @@ plots:
     name: Analysis of revisions
     table:
       enabled: yes
-      digits: 2.0
       contribution_of_sa: yes
+  extra_info:
+    enabled: yes
+    name: Extra informations

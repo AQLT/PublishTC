@@ -11,7 +11,7 @@ series:
       - 2020.8333333
       - 2022.0833333
       - 2024.5
-      ao_inv: ~
+      ao_tc: ~
       ls:
       - 2020.1666667
       - 2020.25
@@ -29,7 +29,7 @@ series:
       - 2020.25
       - 2020.4166667
       - 2020.8333333
-      ao_inv: ~
+      ao_tc: ~
       ls:
       - 2020.25
       - 2020.4166667
@@ -62,6 +62,7 @@ methods:
     eval: no
 plots:
   nyears: 4.0
+  digits: 2.0
   bymethods:
     enabled: yes
     name: By methods
@@ -82,5 +83,7 @@ plots:
     name: Analysis of revisions
     table:
       enabled: yes
-      digits: 2.0
       contribution_of_sa: yes
+  extra_info:
+    enabled: yes
+    name: Extra informations

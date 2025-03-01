@@ -35,7 +35,7 @@ studied_methods <- sapply(spec$methods, `[[`, "eval")
 names_methods <- sapply(spec$methods, `[[`, "name")[which(studied_methods)]
 studied_methods <- names(studied_methods)[which(studied_methods)]
 names(studied_methods) <- names_methods
-digits <- spec$plots$revision_history$table$digits
+digits <- spec$plots$digits
 
 last_est <- lapply(series, function(serie) {
 	spec_s <- spec$series[[serie]]
@@ -45,6 +45,28 @@ last_est <- lapply(series, function(serie) {
 			  ao_tc = spec_s$outliers$ao_tc,
 			  ls = spec_s$outliers$ls)
 })
+
+if (spec$plots$extra_info$enabled) {
+	extra_info <- lapply(last_est, function(sect) {
+		res <- lapply(sect, summary)
+		res <- do.call(
+			rbind,
+			lapply(res, function(x){
+				x$ic_ratios <- NULL
+				unlist(x)
+			}))
+		rownames(res) <- gsub("\n", " ", rownames(res))
+		res
+	})
+	
+	if (length(grep("robust", studied_methods)) > 0) {
+		outliers <- lapply(spec_series, `[[`, "outliers")
+	} else {
+		outliers <- lapply(spec_series, function(x) NULL)
+	}
+	
+}
+
 
 if (spec$plots$revision_history$enabled) {
 	rev_to_table <- function(x) {
@@ -340,6 +362,47 @@ for (serie in names(all_data[[1]])) {
 			}
 			
 		}
+	}
+	
+	if (spec$plots$extra_info$enabled) {
+		cat("## ", spec$plots$extra_info$name)
+		
+		cat(knitr::knit_child(text = c(
+			"```{r}",
+			'knitr::kable(extra_info[[serie]],align = "lccc", digits = digits)',
+			"```",
+			""
+		), envir = environment(), quiet = TRUE
+		))
+		if (any(lengths(outliers[[serie]]) > 0)) {
+			cat("**Outliers**:\n\n")
+			if (!is.null(outliers[[serie]]$ao)) {
+				cat(
+					"\n\n- *Additive outlier* (AO) :",
+					knitr::combine_words(format(zoo::as.yearmon(outliers[[serie]]$ao), "%B %Y")),
+					"\n\n"
+				)
+			}
+			
+			if (!is.null(outliers[[serie]]$ao_tc)) {
+				cat(
+					"\n\n- - *Additive outlier* (AO) associated to Trend-Cycle:",
+					knitr::combine_words(format(zoo::as.yearmon(outliers[[serie]]$ao), "%B %Y")),
+					"\n\n"
+				)
+			}
+			
+			if (!is.null(outliers[[serie]]$ls)) {
+				cat(
+					"\n\n- *Level shift* (LS):",
+					knitr::combine_words(format(zoo::as.yearmon(outliers[[serie]]$ao), "%B %Y")),
+					"\n\n"
+				)
+			}
+			
+		}
+		
+		
 	}
 }
 ```

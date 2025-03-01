@@ -71,7 +71,7 @@ for (s in sheets){
 	data_s <- lapply(data$label, function(label){
 		list(idbank = data[label, "idbank"],
 			 description = data[label, "description"],
-			 outliers = list(ao = NULL, aoinv = NULL, ls = NULL),
+			 outliers = list(ao = NULL, ao_tc = NULL, ls = NULL),
 			 first_date = 2012,
 			 length = 13
 			 )
@@ -148,6 +148,7 @@ for (f in files){
 				eval = FALSE))
 	data$plots <-
 		list(nyears = 4,
+			 digits = 2,
 			 bymethods = list(
 			 	enabled = TRUE,
 			 	name = "By methods"
@@ -170,10 +171,13 @@ for (f in files){
 			 	name = "Analysis of revisions",
 			 	table = list(
 			 		enabled = TRUE,
-			 		digits = 2,
 			 		contribution_of_sa = TRUE
 			 	)
-			 	)
+			 	),
+			 extra_info = list(
+			 	enabled = TRUE,
+			 	name = "Extra informations"
+			 )
 		)
 
 	data$revision_history <- NULL
