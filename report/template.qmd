@@ -52,7 +52,7 @@ if (spec$plots$extra_info$enabled) {
 		res <- do.call(
 			rbind,
 			lapply(res, function(x){
-				x$ic_ratios <- NULL
+				x[["I/C ratios"]] <- NULL
 				unlist(x)
 			}))
 		rownames(res) <- gsub("\n", " ", rownames(res))
